@@ -1,0 +1,183 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #01071a;
+    color: #ffffff;
+    list-style: none;
+    text-decoration: none;
+}
+
+.header, .recent{
+    margin-top: 2rem;
+}
+
+h1{
+    font-weight: 500;
+}
+
+h2{
+    font-weight: 400;
+}
+
+span{
+    font-size: .8rem;
+}
+
+.t-center{
+    text-align: center;
+}
+
+label {
+    /* padding: 0.375rem 0.75rem; */
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 2;
+}
+
+input, button{
+    display: block;
+    width: 85vw;
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgb(226, 226, 226);
+    background-color: #273257;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+}
+
+.d-flex-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.d-none{
+    display: none;
+}
+
+.fgroup {
+    margin: 10px ;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.w60{
+    width: 60%;
+}
+.w40{
+    width: 40%;
+}
+
+.hand {
+    cursor: pointer;
+}
+
+.alertText{
+    color: red;
+}
+
+.calc-btn{
+    background-color: #afb6cb;
+    color: #01071a;
+}
+.reset-btn{
+    background-color: rgb(60, 62, 77);
+    color: #ffffff;
+}
+
+
+/* Table */
+table{
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+}
+table, th, td{
+    color : rgb(181, 179, 179);
+    border: 2px solid rgb(128, 128, 128);
+    border-collapse: collapse;
+    text-align: center;
+    padding: 1px;
+}
+
+
+
+
+
+
+
+@media (min-width:992px) {
+    body{
+        min-height: 50vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .header{
+        margin-top: 3rem;
+    }
+    .t-center{
+        margin-bottom: 2rem;
+    }
+    .main{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .d-flex-center{
+        padding: 10px;
+        border: 2px solid #afb6cb;
+        border-radius: 15px;
+    }
+    label {
+        font-size: 1.3rem;
+        font-weight: 300;
+        line-height: 2;
+    }
+    input, button{
+        display: block;
+        width: 40vw;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: rgb(226, 226, 226);
+        background-color: #273257;
+        border: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 0.375rem;
+    }
+    .recent{
+        margin-top: 2rem;
+        padding: 0 20px;
+        width: 40vw;
+        height: 60vh;
+    }
+    .overflow{
+        margin-top: .2rem;
+        overflow-y: scroll;
+        height: 80%;
+    }
+    .overflow thead th{
+        position: sticky;
+        top: 0;
+    }
+}

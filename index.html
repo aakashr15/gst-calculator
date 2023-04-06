@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GST Calculator</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+        <div class="header">
+            <h1 class="t-center">GST Calculator</h1>
+        </div>
+
+    <div class="main">
+        
+        <form class="d-flex-center" id="gst-calc" name="gstcalc">
+
+            <!-- cost-------------------------------- -->
+
+            <div class="fgroup">
+               <label for="cost">Enter Amount</label>
+               <input type="number" name="cost" id="cost" placeholder="Enter Amount" required>
+           </div>
+
+           <!-- gst-------------------------------- -->
+
+           <div class="fgroup">
+                <label for="gst">Enter the GST Rate <span>(in %)</span></label>
+                <input type="number" name="gst" id="gst" placeholder="Enter the GST Rate in %" value="18" required>
+            </div>
+            
+           <!-- gst-------------------------------- -->
+
+            <div class="alertText d-none"></div>
+           
+            <!-- button--------------------------- -->
+            <div class="d-flex">
+                <input type="button" class="hand fgroup w60 calc-btn" value="Calculate" id="calculate" onclick="calcgst()" >
+            
+                <input type="reset" class="hand fgroup w40 reset-btn" value="Reset">
+            </div>
+
+            <!-- tax -------------------------------- -->
+            
+            <div class="fgroup">
+                <label for="tax">Tax cost is</label>
+                <input type="text" name="tax" id="tax" placeholder="Click Calculate Total to get the tax" disabled>
+            </div>
+
+            <!-- total-------------------------------- -->
+            
+            <div class="fgroup">
+                <label for="total">Total cost is</label>
+                <input type="text" name="total" id="total" placeholder="Click Calculate Total to get the total" disabled>
+            </div>
+            
+        </form>
+
+        <div class="recent d-none">
+            <h2 class="t-center">Recent</h2>
+            
+            <div class="overflow">
+                <table class="recentTable">
+                    <thead>
+                      <tr>
+                        <th class="th1">Amount</th>
+                        <th class="th2">GST</th>
+                        <th class="th4">Tax</th>
+                        <th class="th3">Total</th>
+                      </tr>
+                    </thead>
+                    <tbody id="recent">
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+  
+
+
+<!-- const form = document.getElementById("gst-calc");
+const Trecent = document.getElementById("recent");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  
+  // Get form values
+  const field1Value = document.getElementById("field1").value;
+  const field2Value = document.getElementById("field2").value;
+  const field3Value = document.getElementById("field3").value;
+  
+  // Create new row
+  const newRow = document.createElement("tr");
+  const Tamount = document.createElement("td");
+  const Tgst = document.createElement("td");
+  const Ttotal = document.createElement("td");
+  newCell1.textContent = cost;
+  newCell2.textContent = gst;
+  newCell3.textContent = total;
+  newRow.appendChild(Tamount);
+  newRow.appendChild(Tgst);
+  newRow.appendChild(Ttotal);
+  
+  // Add new row to table
+  Trecent.insertBefore(newRow, Trecent.firstChild);
+  
+}); -->
