@@ -119,6 +119,14 @@ table, th, td{
 
 
 
+@media (max-width:992px){
+    .recent{
+        margin-bottom: 5rem;
+    }
+}
+
+
+
 
 
 
